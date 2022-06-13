@@ -119,6 +119,9 @@
     font-weight: 700;
     margin: 0 0 20px 0;
     text-shadow: 0 0 3px #000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.5s;
 }
 
 .main_slider .inner p {
@@ -126,6 +129,9 @@
     font-weight: 300;
     margin: 0 0 20px 0;
     text-shadow: 0 0 3px #000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.5s 0.5s;
 }
 
 .main_slider .inner a {
@@ -133,11 +139,29 @@
     background: #333;
     color: #fff;
     padding: 4px 20px 10px 20px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.5s 1s;
 }
 
 .main_slider figure {
     height: 600px;
     position: relative;
+}
+
+.main_slider figure.on .inner h2 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.main_slider figure.on .inner p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.main_slider figure.on .inner a {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .main_slider .itm01 {
@@ -146,6 +170,18 @@
 
 .main_slider .itm02 {
     background: url(../img/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.main_slider .itm02 .inner {
+    color: #111;
+}
+
+.main_slider .itm02 .inner h2 {
+    text-shadow: 0 0 3px #fff;
+}
+
+.main_slider .itm02 .inner p {
+    text-shadow: 0 0 3px #fff;
 }
 
 .main_slider .itm03 {
@@ -198,4 +234,93 @@
 .main_slider .slick-next {
     margin: 0 0 0 700px;
     transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.main_visual {
+    position: relative;
+}
+
+.main_visual .slideNum {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-100%);
+    margin: 0 0 0 600px;
+    color: #fff;
+    font-size: 40px;
+    text-shadow: 0 0 3px #000;
+}
+
+.main_visual .slideArrows i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+.main_visual .slideArrows i:nth-child(1) {
+    margin: 0 0 0 -700px;
+}
+
+.main_visual .slideArrows i:nth-child(2) {
+    margin: 0 0 0 700px;
+}
+
+
+/* content01 */
+.content01 {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.content01 h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.content01 p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+.content01 .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.content01 .container figure {
+    flex: 1;
+}
+
+.content01 .container figure .box {
+    overflow: hidden;
+    margin: 0 0 20px 0;
+}
+
+.content01 .container figure img {
+    transition: all 0.3s;
+}
+
+.content01 .container figure:hover img {
+    transform: scale(1.2) rotate(-7deg);
+}
+
+.content01 strong {
+    display: block;
+    margin: 0 0 20px 0;
+}
+
+.content01 a {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 5px 15px 7px 15px;
 }
